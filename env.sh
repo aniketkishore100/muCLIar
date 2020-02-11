@@ -32,3 +32,9 @@ CURRDIR=$(dirname "$CURRDIR")
 sudo ln -s $CURRDIR/mu /usr/local/bin
 chmod 777 /usr/local/bin/mu
 chmod +x ./uninstall.sh
+
+#Keybindings(Hotkeys)
+sudo apt-get install playerctl
+sudo python3 ./src/setup_hotkeys.py 'play/pause' 'playerctl play-pause youtube' '<Alt>q'
+sudo python3 ./src/setup_hotkeys.py 'next song' 'playerctl next youtube' '<Alt>n'
+sudo python3 ./src/setup_hotkeys.py 'previous' 'playerctl previous youtube' '<Alt>b'
